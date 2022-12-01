@@ -1,1 +1,1 @@
-# teaching_LCC
+# teaching_COMPSI
