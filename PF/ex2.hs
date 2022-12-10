@@ -31,7 +31,7 @@ pega n (x:xs) = if (<=) n 0 then [] else x:(pega ((-) n 1) xs)
 
 larga 0 li = li
 larga n [] = []
-larga n (x:xs) = if n >= (length (x:xs)) then [] else (larga ((-) n 1) xs)
+larga n (x:xs) = if (>=) n (length (x:xs)) then [] else (larga ((-) n 1) xs)
 
 primeiro (x,_) = x
 
