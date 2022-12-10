@@ -4,7 +4,7 @@ module Exercises
 len [] = 0
 --len [x] = 1
 --len ((++) x y) = len x + len y
-len (x:y) = 1 + len y
+len (x:y) = (+) 1 len y
 
 --merge [] [] = []
 merge [] x = x
@@ -27,11 +27,11 @@ cauda (x:xs) = xs
 
 -- pega 0 _ = []
 pega n [] = []
-pega n (x:xs) = if n <= 0 then [] else x:(pega (n-1) xs)
+pega n (x:xs) = if (<=) n 0 then [] else x:(pega ((-) n 1) xs)
 
 larga 0 li = li
 larga n [] = []
-larga n (x:xs) = if n >= (length (x:xs)) then [] else (larga (n-1) xs)
+larga n (x:xs) = if n >= (length (x:xs)) then [] else (larga ((-) n 1) xs)
 
 primeiro (x,_) = x
 
