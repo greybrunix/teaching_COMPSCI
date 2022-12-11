@@ -1,10 +1,10 @@
-module Exercises
-  where
+
+
 
 len [] = 0
 --len [x] = 1
 --len ((++) x y) = len x + len y
-len (x:y) = (+) 1 len y
+len (x:y) = succ (len y)
 
 --merge [] [] = []
 merge [] x = x
